@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit MarqueDeVoiture{% endblock %}
+
+{% block body %}
+    <h1>Edit MarqueDeVoiture</h1>
+
+    {{ include('administration/marque_de_voiture/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('marque_de_voiture_index') }}">back to list</a>
+
+    {{ include('administration/marque_de_voiture/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DetailVoiture index
+{% endblock %}
+
+{% block body %}
+	<h1>DetailVoiture index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Prix</th>
+				<th>Couleur</th>
+				<th>Modeles</th>
+				<th>Nombre_portes</th>
+				<th>Type_carburant</th>
+				<th>Boite_vitesse</th>
+				<th>Image</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for detail_voiture in detail_voitures %}
+				<tr>
+					<td>{{ detail_voiture.id }}</td>
+					<td>{{ detail_voiture.prix }}</td>
+					<td>{{ detail_voiture.couleur }}</td>
+					<td>{{ detail_voiture.modeles }}</td>
+					<td>{{ detail_voiture.nombrePortes }}</td>
+					<td>{{ detail_voiture.typeCarburant }}</td>
+					<td>{{ detail_voiture.boiteVitesse }}</td>
+					<td>
+						<img src="/images/{{detail_voiture.images}}" style="height:100px; object-fit:contain;"/>
+					</td>
+					<td>
+						<a href="{{ path('detail_voiture_show', {'id': detail_voiture.id}) }}">show</a>
+						<a href="{{ path('detail_voiture_edit', {'id': detail_voiture.id}) }}">edit</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="7">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{ path('detail_voiture_new') }}">Create new</a>
+{% endblock %}

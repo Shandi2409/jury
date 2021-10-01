@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MarqueDeVoiture index
+{% endblock %}
+
+{% block body %}
+	<h1>MarqueDeVoiture index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nom</th>
+				<th>Creation</th>
+				<th>Fondateurs</th>
+				<th>Filiales</th>
+				<th>Image</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for marque_de_voiture in marque_de_voitures %}
+				<tr>
+					<td>{{ marque_de_voiture.id }}</td>
+					<td>{{ marque_de_voiture.nom }}</td>
+					<td>{{ marque_de_voiture.creation }}</td>
+					<td>{{ marque_de_voiture.fondateurs }}</td>
+					<td>{{ marque_de_voiture.filiales }}</td>
+					<td>
+						<img src="/images/{{marque_de_voiture.images}}" style="height:100px; object-fit:contain;"/>
+					</td>
+					<td>
+						<a href="{{ path('marque_de_voiture_show', {'id': marque_de_voiture.id}) }}">show</a>
+						<a href="{{ path('marque_de_voiture_edit', {'id': marque_de_voiture.id}) }}">edit</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{ path('marque_de_voiture_new') }}">Create new</a>
+{% endblock %}

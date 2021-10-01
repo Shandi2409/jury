@@ -1,0 +1,242 @@
+body section {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    background-color: white;
+}
+
+.logo {
+    width: 10%;
+    margin-right: 300px;
+}
+
+.slogan {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:darkorange;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+element.style {
+    display: none;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.py-2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.px-3 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.mb-3 {
+    margin-bottom: 1rem; 
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+.div{
+    display: block;
+}
+
+.btn-light:hover {
+    border-color: darkgoldenrod;
+}
+
+.nav-link {
+    display: block;
+}
+
+.formulaire, .champ {
+    font-size: 15px;
+    width: 80%;
+    height: 35px;
+    color: black;
+    border-color: black;
+}
+
+.formulaire, .loupe {
+    font-size: 19px;
+    border-color: black;
+    background-color:white;    
+}
+
+.text-end, .btn-light:hover{
+    border-color: black;
+}
+
+div button a {
+    text-decoration: none;
+    color:darkgoldenrod;
+}
+
+.btn, .btn-light {
+    border-color: black;
+}
+
+/*.route {
+    margin-top: 1px; 
+    height: 300px; 
+    width: 1280px;
+    border-radius: 2px; 
+    position: relative; 
+    box-shadow: 0px 10px 10px #1c1a19;
+    margin-bottom: 70px;
+}/*
+
+/********************* CAROUSEL ********************/
+
+.container {
+    width: 100%;
+    padding-right: 50px;
+    margin-right: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#carouselExampleIndicators {
+    height: 100%;     
+    padding: 50px;     
+    width: 700px;     
+    margin-right: 200px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-indicators li{
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: black;
+    background-clip: padding-box;
+    border-top: 10px solid black;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+ol {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    
+    transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.carousel-inner::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+li {
+    display: list-item;
+    text-align:-webkit-match-parent;
+}
+
+::after {
+    box-sizing: border-box;
+}
+
+.carousel-control-prev{
+    left: 0;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 15%;
+    color: black;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-control-next{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 15%;
+    color: black;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: black;
+    border: 1px solid transparent;
+  }
+  .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  

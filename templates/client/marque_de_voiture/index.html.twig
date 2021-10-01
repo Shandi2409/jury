@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MarqueDeVoiture index
+{% endblock %}
+
+{% block body %}
+    <div class="row mt-3">
+    {% for marque_de_voiture in marque_de_voitures %}
+		<div class="col-12 col-md-4">
+            <a href="{{ path('liste_voiture',{'id': marque_de_voiture.id}) }}" style="text-decoration:none;"><div class="card mt-3 mx-5">
+                <div class="card-body text-center">
+                    <img src="/images/{{marque_de_voiture.images}}" class="ml-auto" style="height:100px; object-fit:contain;"/>
+                    <br>
+                    <p class="text-center">
+                    {{ marque_de_voiture.nom }}
+                    </p>
+                </div>
+            </div>
+            </a>
+        </div>													
+            {% endfor %}
+    </div>
+			
+{% endblock %}

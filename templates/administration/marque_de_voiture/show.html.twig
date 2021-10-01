@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MarqueDeVoiture{% endblock %}
+
+{% block body %}
+    <h1>MarqueDeVoiture</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ marque_de_voiture.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ marque_de_voiture.nom }}</td>
+            </tr>
+            <tr>
+                <th>Creation</th>
+                <td>{{ marque_de_voiture.creation }}</td>
+            </tr>
+            <tr>
+                <th>Fondateurs</th>
+                <td>{{ marque_de_voiture.fondateurs }}</td>
+            </tr>
+            <tr>
+                <th>Filiales</th>
+                <td>{{ marque_de_voiture.filiales }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('marque_de_voiture_index') }}">back to list</a>
+
+    <a href="{{ path('marque_de_voiture_edit', {'id': marque_de_voiture.id}) }}">edit</a>
+
+    {{ include('administration/marque_de_voiture/_delete_form.html.twig') }}
+{% endblock %}

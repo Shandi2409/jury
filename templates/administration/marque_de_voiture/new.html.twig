@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New MarqueDeVoiture{% endblock %}
+
+{% block body %}
+    
+    <div class="container py-5">
+        <h1> Créez une nouvelle marque de voiture </h1>
+
+        {{ include('administration/marque_de_voiture/_form.html.twig') }}
+
+        <a href="{{ path('marque_de_voiture_index') }}">back to list</a>
+    </div>
+    
+{% endblock %}
