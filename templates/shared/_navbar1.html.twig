@@ -10,7 +10,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Mon compte
+                         🔒 Espace client
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                         {% if app.user %}
@@ -41,12 +41,12 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-            {% if app.user %}
+            
             <li>
                 <a href="{{path('liste_marque')}}" class="nav-link px-2 text-white"> Marque </a>
             </li>
            
-            {% endif %}
+    
             {% if app.user %}
             {% if app.user.roles[0] is same as "ROLE_ADMIN" %}
                 <li>
@@ -67,6 +67,11 @@
             <li>
                 <a href="{{path('contact_new')}}" class="nav-link px-2 text-white"> Prendre contact </a>
             </li>
+            {% if app.user %}
+            <li>
+                <a href="#" class="nav-link px-2 text-white"> Réservation en ligne </a>
+            </li>
+            {% endif %}
             <li>
                 <a href="#" class="nav-link px-2 text-white"> À propos </a>
             </li>
