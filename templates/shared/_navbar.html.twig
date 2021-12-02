@@ -1,92 +1,31 @@
-<header>
-    <div class="px-3 py-2 bg-dark text-white">
-      <!-- Code pour afficher le titre principal du site et le slogan -->
-      <div id="logo">
-        <img src="{{asset('images/Logo.png')}}" class="logo">
-      </div>
-      <div id="slogan">
-        <h6 class="slogan"> right car, right now </h6>
-      </div>
+{% include "shared/_navbar_connect.html.twig" %}
 
-      <!-- Partie container pour Accueil/ Produits/ Contact -->
-      <div class="container">
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+       {# <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>#}
 
-        <!-- <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-              <svg class="bi me-2" width="50" height="40" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a> -->
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-          <li>
-            <a href="Projet.html" class="nav-link text-white">
-              <i class="far fa-home" width="24" height="24"></i>
-              marques
-            </a>
-          </li>
-          <li>
-            <a href="Produits.html" class="nav-link text-white">
-              <i class="fas fa-border-all" width="24" height="24"></i>
-              voitures neuves 
-            </a>
-          </li>
-          <li>
-            <a href="Produits.html" class="nav-link text-white">
-              <i class="fas fa-border-all" width="24" height="24"></i>
-              voitures d'occasion 
-            </a>
-          </li>
-          {% if app.user %}
-            {% if app.user.roles[0] is same as "ROLE_ADMIN" %}
-                <li>
-                    <a href="{{path('detail_voiture_new')}}" class="nav-link text-white">
-                      <i class="fas fa-border-all" width="24" height="24"></i>
-                      admin-voiture 
-                    </a>
-                  </li>
-                <li>
-                    <a href="{{path('marque_de_voiture_new')}}" class="nav-link text-white">
-                      <i class="fas fa-border-all" width="24" height="24"></i>
-                      admin-marque 
-                    </a>
-                 </li>
-             {% endif %}
-          {% endif %}
+            
+            <li>
+                <a href="{{path('liste_marque')}}" class="nav-link px-2 text-white"> Marque </a>
+            </li>
 
-          <li>
-            <a href="{{path('contact_new')}}" class="nav-link text-white">
-              <i class="fas fa-id-card-alt" width="24" height="24"></i>
-              contact
-            </a>
-          </li>
+            <li>
+                <a href="{{path('contact_new')}}" class="nav-link px-2 text-white"> Prendre contact </a>
+            </li>
+           
+            <li>
+                <a href="#" class="nav-link px-2 text-white"> Réservation en ligne </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link px-2 text-white"> À propos </a>
+            </li>
         </ul>
-      </div>
-      <!-- </div> -->
-    </div>
-
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap">
-
-
-        <form class="formulaire col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-          <div class="formulaire col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-            <input class="champ" type="text" placeholder="recherche"></input>
-            <input class="loupe" type="submit" value="🔍"> </input>
-          </div>
-        </form>
-
-        <div class="text-end justify-content:flex-end">
-
-          {% if app.user %}
-          <button type="button" class="btn btn-light text-dark me-2"> <a href="{{path('app_logout')}}"> <strong> déconnexion
-              </strong> </a></button>
-          {% else %}
-          <button type="button" class="btn btn-light text-dark me-2"> <a href="{{path('app_register')}}"> <strong> s'inscrire
-              </strong> </a></button>
-          <button type="button" class="btn btn-light text-dark me-2"> <a href="{{path('app_login')}}"> <strong> connexion
-              </strong> </a> </button>
-          {% endif %}
-        </div>
-
       </div>
     </div>
   </header>

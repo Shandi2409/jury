@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 /**
- * @Route("/marque/de/voiture")
+ * @Route("/admin/marque/de/voiture")
  */
 class MarqueDeVoitureController extends AbstractController
 {

@@ -26,7 +26,7 @@ element.style {
 img, svg {
     vertical-align: middle;
 }
-
+/*
 .py-2 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -37,7 +37,7 @@ img, svg {
 }
 .mb-3 {
     margin-bottom: 1rem; 
-}
+}*/
 .border-bottom {
     border-bottom: 1px solid #dee2e6;
 }
@@ -48,10 +48,10 @@ img, svg {
 .btn-light:hover {
     border-color: darkgoldenrod;
 }
-
+/*
 .nav-link {
     display: block;
-}
+}*/
 
 .formulaire, .champ {
     font-size: 15px;

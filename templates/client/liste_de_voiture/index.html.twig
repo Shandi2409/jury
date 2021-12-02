@@ -6,7 +6,7 @@
 {% block body %}
     <div class="row mt-3">
     <div class="col-12">
-    <a href="{{ path('liste_marque') }}" class="btn btn-link"> Revenir à la liste </a>
+    <a href="{{ path('liste_marque') }}" class="btn btn-link ml-3"> Revenir à la liste </a>
     </div>
     {% for voiture in marque_de_voiture.detailVoitures %}
 		<div class="col-12 col-md-4">
@@ -14,8 +14,6 @@
             <div class="card mt-4 mx-4">
                 <div class="card-body text-center">
                     <img src="/images/{{voiture.images}}" class="ml-auto" style="height:100px; object-fit:contain;"/>
-                    <br>
-                    <br>
                     <p class="text-center">
                     {{ voiture.modeles }}
                     </p>

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DetailVoiture{% endblock %}
+
+{% block body %}
+
+     
+     <div class="container mt-3">
+     <h3>Caractéristiques de la Voiture</h3>
+
+    <table class="table">
+        <tbody>
+            <tr>
+				<img src="/images/{{detail_voiture.images}}" style="height:100px; object-fit:contain;"/>
+			</tr>
+            <tr>
+                <th>Couleur</th>
+                <td>{{ detail_voiture.couleur }}</td>
+            </tr>
+            <tr>
+                <th>Modeles</th>
+                <td>{{ detail_voiture.modeles }}</td>
+            </tr>
+            <tr>
+                <th>Nombre_portes</th>
+                <td>{{ detail_voiture.nombrePortes }}</td>
+            </tr>
+            <tr>
+                <th>Type_carburant</th>
+                <td>{{ detail_voiture.typeCarburant }}</td>
+            </tr>
+            <tr>
+                <th>Boite_vitesse</th>
+                <td>{{ detail_voiture.boiteVitesse }}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <a href="{{ path('liste_voiture',{'id': detail_voiture.marque.id}) }}"class="btn btn-link"> Revenir à la liste </a>
+
+   {# <a href="{{ path('detail_voiture_index') }}">back to list</a>
+
+    <a href="{{ path('detail_voiture_edit', {'id': detail_voiture.id}) }}">edit</a>
+
+    {{ include('administration/detail_voiture/_delete_form.html.twig') }}#}
+    </div>
+{% endblock %}
