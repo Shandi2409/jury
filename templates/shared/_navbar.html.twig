@@ -13,15 +13,14 @@
             <li>
                 <a href="{{path('liste_marque')}}" class="nav-link px-2 text-white"> Marque </a>
             </li>
-
+            {% if app.user %}
             <li>
                 <a href="{{path('contact_new')}}" class="nav-link px-2 text-white"> Prendre contact </a>
             </li>
-           
             <li>
-                <a href="#" class="nav-link px-2 text-white"> Réservation en ligne </a>
+                <a href="{{path('booking_new')}}" class="nav-link px-2 text-white"> Réservation en ligne </a>
             </li>
-
+           {% endif %}
             <li>
                 <a href="#" class="nav-link px-2 text-white"> À propos </a>
             </li>

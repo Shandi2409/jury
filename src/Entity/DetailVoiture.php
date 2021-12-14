@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\DetailVoitureRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -58,6 +60,12 @@ class DetailVoiture
      * @ORM\Column(type="integer", nullable=true)
      */
     private $prix;
+
+
+    public function __construct()
+    {
+        $this->formulaires = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -160,4 +168,10 @@ class DetailVoiture
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->modeles;
+    }
+
 }
